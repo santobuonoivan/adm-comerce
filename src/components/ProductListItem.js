@@ -14,7 +14,7 @@ const ProductListItem = ({prodId,nombre,talle,color,precio,codigo,urlPath,editAc
                 <div className="field">{precio}</div>
                 <div className="field">{codigo}</div>
                 <div className="field">
-                    <Link to ={`${urlPath}${prodId}/ver`}>{verAction}</Link>
+                    <Link to ={`${urlPath}${prodId}`}>{verAction}</Link>
                 </div>
                 <div className="field">
                     <Link to ={`${urlPath}${prodId}/edit`}>{editAction}</Link>
