@@ -64,24 +64,20 @@ body {
   line-height: 40px;
 }
 .products-list-item .field:first-child {
-  width: 70%;
+  width: 20px;
   margin: 0;
   box-sizing: border-box;
 }
-
 .products-list-item .field {
-  width: 15%;
+  width: 80px;
   margin: 0;
   box-sizing: border-box;  
 }
-
-
 .products-list-item .field:first-child > a {
   color: #222;
   text-decoration: none;
   font-weight: bolder;
 }
-
 .products-list-item .field a {
   color: #666;
   text-decoration: none;

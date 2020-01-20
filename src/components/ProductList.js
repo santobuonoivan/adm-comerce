@@ -11,7 +11,7 @@ const ProductList = ({ products, urlPath }) => {
                         <ProductListItem 
                             key={p.prodId}
                             prodId={p.prodId}
-                            name={p.name}
+                            nombre={p.nombre}
                             talle={p.talle}
                             color={p.color}
                             precio={p.precio}
