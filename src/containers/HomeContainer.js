@@ -7,7 +7,7 @@ import ProductsActions  from './../components/ProductsActions';
 const HomeContainer = props => {
     const handleOnClick = () => {
         console.log('handleOnClick');
-        props.history.push('/productos')
+        props.history.push('/products')
     }
     return (
         <div>

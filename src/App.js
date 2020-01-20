@@ -7,10 +7,10 @@ import ProductContainer from './containers/ProductContainer';
 
 function App() {
   //const renderHome = () => <HomeContainer/>
-  const renderCustomerContainer = () => <h1>Customer Container</h1>
+  const renderCustomerContainer = () => <h1>Product Container</h1>
   
   //const renderCustomerListContainer = () => <ProductContainer/>
-  const renderCustomerNewContainer = () => <h1>Customer New Container</h1>
+  const renderCustomerNewContainer = () => <h1>Product New Container</h1>
 
   return (
     <Router>

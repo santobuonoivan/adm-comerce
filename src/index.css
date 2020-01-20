@@ -14,7 +14,7 @@ body {
   background: #00cbcc;
 }
 
-.customers-actions {
+.products-actions {
   margin: 0;
   position: absolute;
   bottom: 20px;
@@ -24,7 +24,7 @@ body {
   width: calc(100% - 80px);
 }
 
-.customers-actions button {
+.products-actions button {
   background: white;
   min-width: 100px;
   height: 30px;
@@ -34,28 +34,28 @@ body {
   font-weight: bolder;
 }
 
-.customers-actions button:hover {
+.products-actions button:hover {
   background: #F0F0F0;
   border-style: solid;
 }
 
-.customers-list .customers-list-item {
+.products-list .products-list-item {
   width: 100%;
   background: #FFF; 
   transition: 500ms;
   height: 40px;
 }
 
-.customers-list .customers-list-item:nth-child(even) {
+.products-list .products-list-item:nth-child(even) {
   background: #EEE;  
 }
 
-.customers-list .customers-list-item:hover {
+.products-list .products-list-item:hover {
   background: #84adad3a;
   border: 1px solid;
 } 
 
-.customers-list-item .field {
+.products-list-item .field {
   width: 160px;
   margin: 1px;
   padding: 4px;
@@ -63,26 +63,26 @@ body {
   display: inline-block;
   line-height: 40px;
 }
-.customers-list-item .field:first-child {
+.products-list-item .field:first-child {
   width: 70%;
   margin: 0;
   box-sizing: border-box;
 }
 
-.customers-list-item .field {
+.products-list-item .field {
   width: 15%;
   margin: 0;
   box-sizing: border-box;  
 }
 
 
-.customers-list-item .field:first-child > a {
+.products-list-item .field:first-child > a {
   color: #222;
   text-decoration: none;
   font-weight: bolder;
 }
 
-.customers-list-item .field a {
+.products-list-item .field a {
   color: #666;
   text-decoration: none;
   
