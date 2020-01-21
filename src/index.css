@@ -145,6 +145,94 @@ img {
   display: block;
 }
 
+.products-data strong {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+  color: #333;
+  font-size: 11px;
+}
+
+.products-data strong {
+  font-size: 20px;
+}
+
+.customers-actions {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  background: rgba(0,0,0,0.2);
+  padding: 10px;
+  width: calc(100% - 80px);
+}
+
+.customers-actions button {
+  background: white;
+  min-width: 100px;
+  height: 30px;
+  margin: 5px;
+  border-style: none;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+.customers-actions button:hover {
+  background: #F0F0F0;
+  border-style: solid;
+}
+
+.customers-list .customers-list-item {
+  width: 100%;
+  background: #FFF; 
+  transition: 500ms;
+  height: 40px;
+}
+
+.customers-list .customers-list-item:nth-child(even) {
+  background: #EEE;  
+}
+
+.customers-list .customers-list-item:hover {
+  background: #84adad3a;
+  border: 1px solid;
+} 
+
+.customers-list-item .field {
+  width: 160px;
+  margin: 1px;
+  padding: 4px;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 40px;
+}
+.customers-list-item .field:first-child {
+  width: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.customers-list-item .field {
+  width: 80px;
+  margin: 0;
+  box-sizing: border-box;  
+}
+
+
+.customers-list-item .field:first-child > a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.customers-list-item .field a {
+  color: #666;
+  text-decoration: none;
+  
+}
+
+
+
 .customer-data strong {
   width: 100%;
   display: inline-block;

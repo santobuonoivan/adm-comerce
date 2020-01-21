@@ -2,12 +2,16 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import AppFrame from './../components/AppFrame';
-import ProductsActions  from './../components/ProductsActions';
+import ProductsActions  from '../components/products/ProductsActions';
 
 const HomeContainer = props => {
-    const handleOnClick = () => {
+    const handleOnClickProducts = () => {
         console.log('handleOnClick');
         props.history.push('/products')
+    }
+    const handleOnClickCustomers = () => {
+        console.log('handleOnClick');
+        props.history.push('/customers')
     }
     return (
         <div>
@@ -17,7 +21,8 @@ const HomeContainer = props => {
                     <div>
                         Esta es la pantalla inicial
                         <ProductsActions>
-                            <button onClick={handleOnClick}> Listado de Productos </button>
+                            <button onClick={handleOnClickProducts}> Listado de Productos </button>
+                            <button onClick={handleOnClickCustomers}> Listado de Clientes </button>
                             {/*<Link to='/customers'> </Link>*/}
                         </ProductsActions>
                     </div>

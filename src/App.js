@@ -4,6 +4,7 @@ import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import './App.css';
 import HomeContainer from './containers/HomeContainer';
 import ProductContainer from './containers/ProductContainer';
+import CustomersContainer from './containers/CustomersContainer';
 
 function App() {
   //const renderHome = () => <HomeContainer/>
@@ -17,9 +18,12 @@ function App() {
       <div className="App">
         <Route exact path='/' component= {HomeContainer}/>
         <Route exact path='/products' component= {ProductContainer}/>
+        <Route exact path='/customers' component= {CustomersContainer}/>
         <Switch>
           <Route path='/products/new' component= {renderCustomerNewContainer}/>        
           <Route path='/products/:dni' component= {renderCustomerContainer}/>
+          <Route path='/customers/new' component= {renderCustomerNewContainer}/>        
+          <Route path='/customers/:dni' component= {renderCustomerContainer}/>
         </Switch>
       </div>
     </Router>

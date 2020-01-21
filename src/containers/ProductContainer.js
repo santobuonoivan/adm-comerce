@@ -1,8 +1,8 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import AppFrame from './../components/AppFrame';
-import ProductList from './../components/ProductList';
-import ProductsActions from './../components/ProductsActions';
+import ProductList from './../components/products/ProductList';
+import ProductsActions from './../components/products/ProductsActions';
 import { withRouter } from 'react-router-dom';
 
 const products = [
