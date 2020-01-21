@@ -53,7 +53,7 @@ const ProductsContainer = props => {
     return (
         <div>
             <AppFrame 
-                header={'Listado de clientes'}
+                header={'Listado de productos'}
                 // le pasamos una lista de products
                 body={renderBody(products)}
             ></AppFrame>
