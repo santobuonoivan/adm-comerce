@@ -1,0 +1,2 @@
+export const FETCH_CUSTOMERS = 'FETCH_CUSTOMERS';
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
