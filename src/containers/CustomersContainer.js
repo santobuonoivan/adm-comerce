@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import AppFrame from '../components/AppFrame';
 import CustomersList from '../components/clients/CustomerList';
 import CustomersActions from '../components/clients/CustomersActions';
-//import { fetchCustomers } from './../actions/fetchCustomers'; /* esto no debe ir*/
-
+import { fetchCustomers } from './../actions/fetchCustomers'; /* esto no debe ir*/
 
 class CustomersContainer extends Component  {
     

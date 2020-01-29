@@ -2,7 +2,8 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import AppFrame from './../components/AppFrame';
-import ProductsActions  from '../components/products/ProductsActions';
+import ProductsActions  from './../components/products/ProductsActions';
+import CustomersActions  from './../components/clients/CustomersActions';
 
 const HomeContainer = props => {
     const handleOnClickProducts = () => {

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import AppFrame from './../components/AppFrame';
 import ProductList from './../components/products/ProductList';
 import ProductsActions from './../components/products/ProductsActions';
-//import { fetchProducts } from './../actions/fetchProducts';
+import { fetchProducts } from './../actions/fetchProducts';
 
 
 class ProductsContainer extends Component {

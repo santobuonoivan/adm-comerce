@@ -5,6 +5,9 @@ import './App.css';
 import HomeContainer from './containers/HomeContainer';
 import ProductContainer from './containers/ProductContainer';
 import CustomersContainer from './containers/CustomersContainer';
+//import NewCustomerContainer from './containers/NewCustomerContainer';
+//import NewProductContainer from './containers/NewProductContainer';
+
 
 function App() {
   //const renderHome = () => <HomeContainer/>
