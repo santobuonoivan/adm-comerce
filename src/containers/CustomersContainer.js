@@ -48,27 +48,12 @@ CustomersContainer.propTypes = {
 };
 
 CustomersContainer.defaultProps = {
-    customers:  [
-        {
-            custId: 1,
-            dni: "27000000",
-            name: "Juan Perez.",
-            age: 37,
-        },
-        {
-            custId: 2,
-            dni: "30000000",
-            name: "Otro",
-            age: 37,
-        },
-        {
-            custId: 3,
-            dni: "33000000",
-            name: "Luis Martinez",
-            age: 37,
-        },
-    ],
+    customers:  [],
 }
+
+const mapStateToProps = state => ({
+    customers: state.customers,
+});
 /* map viejo 
 const mapDispatchToProps = (dispatch) => ({
     fetchCustomers: () => dispatch(fetchCustomers())
@@ -77,4 +62,4 @@ const mapDispatchToProps = (dispatch) => ({
 /* viejo nuevo
 const mapDispatchToProps = { fetchCustomers };
 */
-export default withRouter(connect(null, { fetchCustomers })(CustomersContainer));
+export default withRouter(connect(mapStateToProps, { fetchCustomers })(CustomersContainer));

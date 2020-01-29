@@ -49,37 +49,16 @@ ProductsContainer.propTypes = {
 };
 
 ProductsContainer.defaultProps = {
-    products: [
-        {
-            prodId: 1,
-            nombre: "chomba.",
-            talle: "L",
-            color: "rojo",
-            precio: "500",
-            codigo: "ab123",
-        },
-        {
-            prodId: 2,
-            nombre: "jean",
-            talle: "48",
-            color: "azul",
-            precio: "700",
-            codigo: "cd345",
-        },
-        {
-            prodId: 3,
-            nombre: "camisa",
-            talle: "XL",
-            color: "blaco",
-            precio: "900",
-            codigo: "xz123",
-        },
-    ]
+    products: []
 };
+
+const mapStateToProps = state => ({
+    products: state.products,
+});
 /* mirar customerContainer
 const mapDispatchToProps = (dispatch) => ({
     fetchProducts: () => dispatch(fetchProducts())
 });
 */
-export default withRouter(connect(null, { fetchProducts })(ProductsContainer));
+export default withRouter(connect(mapStateToProps, { fetchProducts })(ProductsContainer));
 //export default withRouter(ProductsContainer);
