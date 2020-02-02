@@ -4,6 +4,6 @@ import { products } from './products';
 
 
 export default combineReducers({
+    products,
     customers,
-    products
 });

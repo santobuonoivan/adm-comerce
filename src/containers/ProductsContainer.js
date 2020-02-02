@@ -8,7 +8,6 @@ import ProductsActions from './../components/products/ProductsActions';
 import { fetchProducts } from './../actions/fetchProducts';
 import {getProducts} from "../selectors/products";
 
-
 class ProductsContainer extends Component {
 
     componentDidMount() {

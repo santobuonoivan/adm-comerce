@@ -13,7 +13,6 @@ class CustomersContainer extends Component  {
     componentDidMount() {
         this.props.fetchCustomers();
     }
-    
     // modificar
     handleAddNew = () => {
         this.props.history.push('/customers/add')

@@ -1,5 +1,5 @@
 //import { handleAction } from "redux-actions"; (1)
-import { FETCH_PRODUCTS } from "../constants";
+import { FETCH_PRODUCTS } from "./../constants";
 import { handleActions } from "redux-actions";
 
 //(1)

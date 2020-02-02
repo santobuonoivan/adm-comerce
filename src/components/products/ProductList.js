@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ProductListItem from './ProductListItem';
 
 const ProductList = ({ products, urlPath }) => {
-    console.log(products);
+    //console.log(products);
 
     return (
         <div>
