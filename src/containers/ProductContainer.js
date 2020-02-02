@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import AppFrame from "./../components/AppFrame";
+import {getProductByProductId} from "../selectors/products";
 
 class ProductContainer extends Component {
 
@@ -23,7 +24,7 @@ ProductContainer.propTypes = {
 };
 const mapStateToProps = (state,props) => ({
     //products: state.products,
-    product: state.products.find( p => p.product_id === parseInt(props.product_id)),
+    product: getProductByProductId(state,props),
 })
 
 export default connect(mapStateToProps,null)(ProductContainer);
