@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import AppFrame from './../components/AppFrame';
 import ProductsActions  from './../components/products/ProductsActions';
-import CustomersActions  from './../components/clients/CustomersActions';
+//import CustomersActions  from './../components/clients/CustomersActions';
 
 const HomeContainer = props => {
     const handleOnClickProducts = () => {
@@ -22,13 +22,13 @@ const HomeContainer = props => {
                     <div>
                         Esta es la pantalla inicial
                         <ProductsActions>
-                            <button onClick={handleOnClickProducts}> Listado de Productos </button>
-                            <button onClick={handleOnClickCustomers}> Listado de Clientes </button>
+                            <button onClick={handleOnClickProducts}> Listado de Productos</button>
+                            <button onClick={handleOnClickCustomers}> Listado de Clientes</button>
                             {/*<Link to='/customers'> </Link>*/}
                         </ProductsActions>
                     </div>
                 }
-            ></AppFrame>
+            />
         </div>
     );
 };

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 
-const CustumerListItem = ({custId,name,dni,verAction,editAction,delAction,urlPath}) => {
+const CustumerListItem = ({client_id,name,dni,tel,verAction,editAction,delAction,urlPath}) => {
     return (
         <div>
             <div className="customers-list-item">                
-                <div className="field">{custId}</div>
+                <div className="field">{client_id}</div>
                 <div className="field">{name}</div>
                 <div className="field">{dni}</div>
+                <div className="field">{tel}</div>
                 <div className="field">
                     <Link to ={`${urlPath}${dni}`} >{verAction}</Link>
                 </div>              
@@ -25,8 +26,9 @@ const CustumerListItem = ({custId,name,dni,verAction,editAction,delAction,urlPat
 };
 
 CustumerListItem.propTypes = {
-    custId: PropTypes.number.isRequired,
+    client_id: PropTypes.number.isRequired,
     dni: PropTypes.string.isRequired,
+    tel: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     verAction: PropTypes.string.isRequired,
     editAction: PropTypes.string.isRequired,

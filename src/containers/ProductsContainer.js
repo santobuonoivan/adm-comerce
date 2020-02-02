@@ -21,10 +21,10 @@ class ProductsContainer extends Component {
 
     renderBody = products => (
         <div>
-            <ProductList 
+            <ProductList
                 products = {products}
                 urlPath = {'products/'} /* la base para despues agregar edir delete*/
-            ></ProductList>
+            />
             <ProductsActions>
                 <button onClick={this.handleAddNew}>Nuevo Producto</button>
             </ProductsActions>
@@ -34,11 +34,11 @@ class ProductsContainer extends Component {
     render(){
         return (
             <div>
-                <AppFrame 
+                <AppFrame
                     header={'Listado de productos'}
                     // le pasamos una lista de products
                     body={this.renderBody(this.props.products)}
-                ></AppFrame>
+                />
             </div>
         );
     }

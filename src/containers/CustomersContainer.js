@@ -16,15 +16,15 @@ class CustomersContainer extends Component  {
     
     // modificar
     handleAddNew = () => {
-        this.props.history.push('/customer/add')
+        this.props.history.push('/customers/add')
     };
 
     renderBody = customers => (
         <div>
-            <CustomersList 
+            <CustomersList
                 customers = {customers}
-                urlPath = {'customer/'} /* la base para despues agregar edir delete*/
-            ></CustomersList>
+                urlPath = {'customers/'} /* la base para despues agregar edir delete*/
+            />
             <CustomersActions>
                 <button onClick={this.handleAddNew}>Nuevo Cliente</button>
             </CustomersActions>
@@ -33,11 +33,11 @@ class CustomersContainer extends Component  {
     render() {
         return (
             <div>
-                <AppFrame 
+                <AppFrame
                     header={'Listado de clientes'}
                     // le pasamos una lista de customers
                     body={this.renderBody(this.props.customers)}
-                ></AppFrame>
+                />
             </div>
         );
     }
@@ -50,7 +50,7 @@ CustomersContainer.propTypes = {
 
 CustomersContainer.defaultProps = {
     customers:  [],
-}
+};
 
 const mapStateToProps = state => ({
     //customers: state.customers,
