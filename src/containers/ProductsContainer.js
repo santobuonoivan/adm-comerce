@@ -6,6 +6,7 @@ import AppFrame from './../components/AppFrame';
 import ProductList from './../components/products/ProductList';
 import ProductsActions from './../components/products/ProductsActions';
 import { fetchProducts } from './../actions/fetchProducts';
+import {getProducts} from "../selectors/products";
 
 
 class ProductsContainer extends Component {
@@ -53,7 +54,7 @@ ProductsContainer.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    products: state.products,
+    products: getProducts(state)
 });
 /* mirar customerContainer
 const mapDispatchToProps = (dispatch) => ({

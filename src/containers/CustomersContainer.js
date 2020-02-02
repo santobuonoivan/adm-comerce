@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import AppFrame from '../components/AppFrame';
 import CustomersList from '../components/clients/CustomerList';
 import CustomersActions from '../components/clients/CustomersActions';
-import { fetchCustomers } from './../actions/fetchCustomers'; /* esto no debe ir*/
+import { fetchCustomers } from './../actions/fetchCustomers';
+import {getCustomers} from "./../selectors/customers"; /* esto no debe ir*/
 
 class CustomersContainer extends Component  {
     
@@ -52,7 +53,8 @@ CustomersContainer.defaultProps = {
 }
 
 const mapStateToProps = state => ({
-    customers: state.customers,
+    //customers: state.customers,
+    customers: getCustomers(state),
 });
 /* map viejo 
 const mapDispatchToProps = (dispatch) => ({

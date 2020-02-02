@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 import ProductListItem from './ProductListItem';
 
 const ProductList = ({ products, urlPath }) => {
+    console.log(products);
+
     return (
         <div>
             <div className="product-list">
                 {
                     products.map( p => 
                         <ProductListItem 
-                            key={p.prodId}
-                            prodId={p.prodId}
-                            nombre={p.nombre}
+                            key={p.product_id}
+                            product_id={p.product_id}
+                            name={p.name}
                             talle={p.talle}
                             color={p.color}
-                            precio={p.precio}
-                            codigo={p.codigo}
+                            code={p.code}
                             verAction={'Ver'}
                             editAction={'Editar'}
                             delAction={'Eliminar'}

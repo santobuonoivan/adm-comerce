@@ -3,24 +3,23 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 
-const ProductListItem = ({prodId,nombre,talle,color,precio,codigo,urlPath,editAction,delAction,verAction}) => {
+const ProductListItem = ({product_id,name,color,code,urlPath,editAction,delAction,verAction}) => {
+    //console.log({product_id,name,color,code,urlPath,editAction,delAction,verAction})
     return (
         <div>
             <div className="products-list-item">
-                <div className="field">{prodId}</div>
-                <div className="field">{nombre}</div>
-                <div className="field">{talle}</div>
+                <div className="field">{product_id}</div>
+                <div className="field">{name}</div>
                 <div className="field">{color}</div>
-                <div className="field">{precio}</div>
-                <div className="field">{codigo}</div>
+                <div className="field">{code}</div>
                 <div className="field">
-                    <Link to ={`${urlPath}${prodId}`}>{verAction}</Link>
+                    <Link to ={`${urlPath}${product_id}`}>{verAction}</Link>
                 </div>
                 <div className="field">
-                    <Link to ={`${urlPath}${prodId}/edit`}>{editAction}</Link>
+                    <Link to ={`${urlPath}${product_id}/edit`}>{editAction}</Link>
                 </div>
                 <div className="field">
-                    <Link to ={`${urlPath}${prodId}/delete`}>{delAction}</Link>
+                    <Link to ={`${urlPath}${product_id}/delete`}>{delAction}</Link>
                 </div>
             </div>
         </div>
@@ -28,12 +27,12 @@ const ProductListItem = ({prodId,nombre,talle,color,precio,codigo,urlPath,editAc
 };
 
 ProductListItem.propTypes = {
-    prodId: PropTypes.number.isRequired,
-    nombre: PropTypes.string,
-    talle: PropTypes.string,
+    product_id: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    //talle: PropTypes.string,
     color: PropTypes.string,
-    precio: PropTypes.string,
-    codigo: PropTypes.string,
+    //precio: PropTypes.string,
+    code: PropTypes.string,
     verAction: PropTypes.string,
     editAction: PropTypes.string,
     delAction: PropTypes.string,

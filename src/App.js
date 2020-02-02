@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import './App.css';
 import HomeContainer from './containers/HomeContainer';
-import ProductContainer from './containers/ProductContainer';
+import ProductContainer from './containers/ProductsContainer';
 import CustomersContainer from './containers/CustomersContainer';
 //import NewCustomerContainer from './containers/NewCustomerContainer';
 //import NewProductContainer from './containers/NewProductContainer';
