@@ -6,7 +6,24 @@ const CustomerEdit = ({ client_id, dir, name, dni, tel }) => {
     return (
         <div>
             <h2>Edicion del  Cliente {client_id}</h2>
-            <h3>Name: {name} /DNI: {dni} /Dir: {dir} /tel: {tel} </h3>
+            <form action=''>
+                <div>
+                    <label htmlFor='name'>Nombre</label>
+                    <Field name='name' component='input' type='text'/>
+                </div>
+                <div>
+                    <label htmlFor='dni'>Dni</label>
+                    <Field name='dni' component='input' type='text'/>
+                </div>
+                <div>
+                    <label htmlFor='tel'>Tel</label>
+                    <Field name='tel' component='input' type='text'/>
+                </div>
+                <div>
+                    <label htmlFor='dir'>Dir</label>
+                    <Field name='dir' component='input' type='text'/>
+                </div>
+            </form>
         </div>
     );
 };
