@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
+import { connect } from 'react-redux';
+import {setPropsAsInitial} from "../../helpers/setPropsAsInitial";
+
 
 const CustomerEdit = ({ client_id, dir, name, dni, tel }) => {
     return (
@@ -36,4 +39,6 @@ CustomerEdit.propTypes = {
     tel: PropTypes.string,
 };
 
-export default reduxForm({ form: 'CustomerEdit'})(CustomerEdit);
+const CustomerEditForm = reduxForm({ form: 'CustomerEdit'})(CustomerEdit);
+
+export default setPropsAsInitial(CustomerEditForm);
