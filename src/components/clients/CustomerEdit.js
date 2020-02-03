@@ -40,5 +40,4 @@ CustomerEdit.propTypes = {
 };
 
 const CustomerEditForm = reduxForm({ form: 'CustomerEdit'})(CustomerEdit);
-
 export default setPropsAsInitial(CustomerEditForm);

@@ -43,7 +43,7 @@ const ProductEdit = ({ product_id,name,code,color }) => {
                 />
                 <Field
                     name='color'
-                    component='input'
+                    component={MyField}
                     type='text'
                     label='Color'
                 />
