@@ -27,26 +27,9 @@ const ProductEdit = ({ product_id,name,code,color }) => {
         <div>
             <h2>Edicion del  Producto {product_id}</h2>
             <form action=''>
-                <Field
-                    name='name'
-                    component={MyField}
-                    type='text'
-                    validate={isRequired}
-                    label='Nombre'
-                />
-                <Field
-                    name='code'
-                    component={MyField}
-                    type='text'
-                    validate={isRequired}
-                    label='Code'
-                />
-                <Field
-                    name='color'
-                    component={MyField}
-                    type='text'
-                    label='Color'
-                />
+                <Field name='name' component={MyField} type='text' validate={isRequired} label='Nombre' />
+                <Field name='code' component={MyField} type='text' validate={isRequired} label='Code' />
+                <Field name='color' component={MyField} type='text' label='Color' />
             </form>
         </div>
     );
