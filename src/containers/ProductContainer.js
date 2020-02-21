@@ -7,6 +7,7 @@ import {Route, withRouter} from "react-router-dom";
 import ProductEdit from "./../components/products/ProductEdit";
 import ProductData from "./../components/products/ProductData";
 import {fetchProducts} from "./../actions/fetchProducts";
+import {updateProduct} from "./../actions/updateProduct";
 
 class ProductContainer extends Component {
 
@@ -17,7 +18,9 @@ class ProductContainer extends Component {
     }
 
     handleSubmit = values => {
-        console.log(JSON.stringify(values));
+        //console.log(JSON.stringify(values));
+        const { product_id } = values;
+        this.props.updateProduct( product_id, values)
     };
 
     handleOnBack = () => {
@@ -50,10 +53,11 @@ ProductContainer.propTypes = {
     product_id: PropTypes.string.isRequired,
     product: PropTypes.object,
     fetchProducts: PropTypes.func.isRequired,
+    updateProduct: PropTypes.func.isRequired,
 };
 const mapStateToProps = (state,props) => ({
     //products: state.products,
     product: getProductByProductId(state,props),
 })
 
-export default withRouter( connect(mapStateToProps, {fetchProducts})(ProductContainer));
+export default withRouter( connect(mapStateToProps, {fetchProducts,updateProduct})(ProductContainer));
