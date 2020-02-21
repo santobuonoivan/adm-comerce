@@ -28,11 +28,19 @@ class ProductContainer extends Component {
         /* necesita el componente conectado con withRouter */
     };
 
+    onSubmitSuccess = () => {
+        this.props.history.goBack();
+        /* Si es exitoso go back */
+    }
+
     renderBody = () =>(
         <Route path='/products/:product_id/edit' children={
             ( { match } ) => {
                 const CustomerControl = match ? ProductEdit : ProductData;
-                return <CustomerControl {...this.props.product} onSubmit={this.handleSubmit} onBack={this.handleOnBack}/>
+                return <CustomerControl {...this.props.product}
+                                        onSubmit={this.handleSubmit}
+                                        onSubmitSuccess = {this.onSubmitSuccess}
+                                        onBack={this.handleOnBack}/>
             }
         }/>
     );

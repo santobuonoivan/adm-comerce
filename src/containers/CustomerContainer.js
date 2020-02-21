@@ -29,12 +29,19 @@ class CustomerContainer extends Component {
         /* necesita el componente conectado con withRouter */
     };
 
+    onSubmitSuccess = () => {
+        this.props.history.goBack();
+        /* Si es exitoso go back */
+    }
 
     renderBody = () =>(
         <Route path='/customers/:dni/edit' children={
             ( { match } ) => {
                 const CustomerControl = match ? CustomerEdit : CustomerData;
-                return <CustomerControl {...this.props.customer} onSubmit={this.handleSubmit} onBack={this.handleOnBack}/>
+                return <CustomerControl {...this.props.customer}
+                                        onSubmit={this.handleSubmit}
+                                        onSubmitSuccess = {this.onSubmitSuccess}
+                                        onBack={this.handleOnBack}/>
             }
         }/>
     );
