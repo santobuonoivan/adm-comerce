@@ -21,7 +21,7 @@ const ProductList = ({ products, urlPath }) => {
                             editAction={'Editar'}
                             delAction={'Eliminar'}
                             urlPath={urlPath}
-                        ></ProductListItem>
+                        />
                     )
                 }
             </div>

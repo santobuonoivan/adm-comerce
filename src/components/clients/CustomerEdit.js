@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import {setPropsAsInitial} from "../../helpers/setPropsAsInitial";
+import CustomersActions from "./CustomersActions";
 
 /* validacion*/
 const isRequired = value => (
@@ -22,16 +23,20 @@ const  MyField = ({input, meta, type, label, name}) => (
     </div>
 );
 
-const CustomerEdit = ({ client_id, dir, name, dni, tel }) => {
+const CustomerEdit = ({ client_id, dir, name, dni, tel, handleSubmit, submitting, onBack }) => {
 
     return (
         <div>
             <h2>Edicion del  Cliente {client_id}</h2>
-            <form action=''>
+            <form onSubmit={handleSubmit}>
                     <Field name='name' component={MyField} type='text'  label='Nombre'/>
                     <Field name='dni' component={MyField} type='text'  label='Dni'/>
                     <Field name='tel' component={MyField} type='text' label='Tel' />
                     <Field name='dir' component={MyField} type='text' label='Dir'/>
+                    <CustomersActions>
+                        <button type='submit' disabled={submitting}> Editar </button>
+                        <button onClick={onBack}>Cancalar</button>
+                    </CustomersActions>
             </form>
         </div>
     );
@@ -43,6 +48,7 @@ CustomerEdit.propTypes = {
     name: PropTypes.string,
     dni: PropTypes.string,
     tel: PropTypes.string,
+    onBack: PropTypes.func.isRequired,
 };
 
 const CustomerEditForm = reduxForm({ form: 'CustomerEdit'})(CustomerEdit);

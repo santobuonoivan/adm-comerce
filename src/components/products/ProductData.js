@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProductsActions from "./ProductsActions";
 
-const ProductData = ({product_id,name,code,color}) => {
+const ProductData = ({product_id,name,code,color,onBack}) => {
     return (
         <div>
             <div className="products-data">
@@ -11,6 +12,9 @@ const ProductData = ({product_id,name,code,color}) => {
                 <div><strong>Color</strong><i>{color}</i></div>
                 <div><strong>Id</strong><i>{product_id}</i></div>
             </div>
+            <ProductsActions>
+                <button onClick={onBack}>Volver</button>
+            </ProductsActions>
         </div>
     );
 };
@@ -21,7 +25,8 @@ ProductData.propTypes = {
     //talle: PropTypes.string,
     color: PropTypes.string,
     //precio: PropTypes.string,
-    code: PropTypes.string
+    code: PropTypes.string,
+    onBack: PropTypes.func.isRequired,
 };
 
 export default ProductData;

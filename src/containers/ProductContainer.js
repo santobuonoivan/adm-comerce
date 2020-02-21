@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import AppFrame from "./../components/AppFrame";
-import {getProductByProductId} from "../selectors/products";
-import {Route} from "react-router-dom";
-import ProductEdit from "../components/products/ProductEdit";
-import ProductData from "../components/products/ProductData";
+import {getProductByProductId} from "./../selectors/products";
+import {Route, withRouter} from "react-router-dom";
+import ProductEdit from "./../components/products/ProductEdit";
+import ProductData from "./../components/products/ProductData";
 
 class ProductContainer extends Component {
     /*
@@ -15,12 +15,20 @@ class ProductContainer extends Component {
         }
     }
     */
+    handleSubmit = values => {
+        console.log(JSON.stringify(values));
+    };
+
+    handleOnBack = () => {
+        this.props.history.goBack();
+        /* necesita el componente conectado con withRouter */
+    };
 
     renderBody = () =>(
         <Route path='/products/:product_id/edit' children={
             ( { match } ) => {
                 const CustomerControl = match ? ProductEdit : ProductData;
-                return <CustomerControl {...this.props.product}/>
+                return <CustomerControl {...this.props.product} onSubmit={this.handleSubmit} onBack={this.handleOnBack}/>
             }
         }/>
     );
@@ -46,4 +54,4 @@ const mapStateToProps = (state,props) => ({
     product: getProductByProductId(state,props),
 })
 
-export default connect(mapStateToProps,null)(ProductContainer);
+export default withRouter( connect(mapStateToProps,null)(ProductContainer));

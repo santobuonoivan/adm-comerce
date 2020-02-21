@@ -7,11 +7,12 @@ import ProductsActions  from './../components/products/ProductsActions';
 
 const HomeContainer = props => {
     const handleOnClickProducts = () => {
-        console.log('handleOnClick');
+        //
+        // console.log('handleOnClick');
         props.history.push('/products')
     }
     const handleOnClickCustomers = () => {
-        console.log('handleOnClick');
+        //console.log('handleOnClick');
         props.history.push('/customers')
     }
     return (

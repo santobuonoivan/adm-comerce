@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CustomerListItem from './CustumerListItem';
 
 const CustomerList = ({ customers, urlPath }) => {
-    console.log(customers);
+    //console.log(customers);
     return (
         <div>
             <div className="customer-list">
