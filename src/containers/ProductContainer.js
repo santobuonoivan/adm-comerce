@@ -6,15 +6,16 @@ import {getProductByProductId} from "./../selectors/products";
 import {Route, withRouter} from "react-router-dom";
 import ProductEdit from "./../components/products/ProductEdit";
 import ProductData from "./../components/products/ProductData";
+import {fetchProducts} from "./../actions/fetchProducts";
 
 class ProductContainer extends Component {
-    /*
+
     componentDidMount() {
         if (!this.props.customer){
             this.props.fetchProducts();
         }
     }
-    */
+
     handleSubmit = values => {
         console.log(JSON.stringify(values));
     };
@@ -47,11 +48,12 @@ class ProductContainer extends Component {
 
 ProductContainer.propTypes = {
     product_id: PropTypes.string.isRequired,
-    product: PropTypes.object.isRequired,
+    product: PropTypes.object,
+    fetchProducts: PropTypes.func.isRequired,
 };
 const mapStateToProps = (state,props) => ({
     //products: state.products,
     product: getProductByProductId(state,props),
 })
 
-export default withRouter( connect(mapStateToProps,null)(ProductContainer));
+export default withRouter( connect(mapStateToProps, {fetchProducts})(ProductContainer));
