@@ -20,7 +20,7 @@ class ProductContainer extends Component {
     handleSubmit = values => {
         //console.log(JSON.stringify(values));
         const { product_id } = values;
-        this.props.updateProduct( product_id, values)
+        return this.props.updateProduct( product_id, values) /* el return es el que desabilita el submiting por promise*/
     };
 
     handleOnBack = () => {

@@ -21,7 +21,7 @@ class CustomerContainer extends Component {
     handleSubmit = values => {
         //console.log(JSON.stringify(values));
         const { client_id } = values;
-        this.props.updateCustomer( client_id, values);
+        return this.props.updateCustomer( client_id, values); /* el return es el que desabilita el submiting por promise*/
     };
 
     handleOnBack = () => {
